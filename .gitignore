@@ -1,32 +1,25 @@
-# Python
+# Python & Environments
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-
-# Virtual Environment
 .venv/
 env/
 venv/
-ENV/
-env.bak/
-venv.bak/
+.env
 
-# Django
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+# Secrets & Tokens
+*token*.txt
+*.secret
+
+# Database & Media
+*.sqlite3
+*.sqlite3-journal
 media/
 
-# Static collected
+# Collected static
 staticfiles/
 
 # IDE & OS
 .vscode/
 .idea/
-*.swp
-*.swo
 .DS_Store
 Thumbs.db

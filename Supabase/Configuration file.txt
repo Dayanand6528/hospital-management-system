@@ -1,0 +1,6 @@
+Peoject URL: https://zjgfkpbrbnbrukkvmjca.supabase.co
+Publishable KEY: sb_publishable_aPjqAh4dnTwQXk5fO7kH2g_fQQKij2q
+Direct Connection String: postgresql://postgres:[PassWordBahutMushkilHonaChahiye]@db.zjgfkpbrbnbrukkvmjca.supabase.co:5432/postgres
+CLI Setup Command: supabase login
+		   supabase init
+		   supabase link --project-ref zjgfkpbrbnbrukkvmjca
