@@ -16,47 +16,38 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
-        self.stdout.write('Clearing all existing data...')
-        from django.core.management import call_command
-        from django.apps import apps
-        for model in apps.get_models():
-            try:
-                model.objects.all().delete()
-            except Exception:
-                pass
-        self.stdout.write('  All data cleared.')
+        self.stdout.write('Preparing demo data...')
 
         self.stdout.write('Creating comprehensive demo data...')
         self.today = timezone.now().date()
         self.now = timezone.now()
 
-        with transaction.atomic():
-            self._create_roles()
-            self._create_admin()
-            self._create_branch()
-            self._create_departments()
-            self._create_specializations()
-            self._create_insurance()
-            self._create_doctors()
-            self._create_nurses()
-            self._create_pharmacists()
-            self._create_lab_techs()
-            self._create_accountants()
-            self._create_receptionists()
-            self._create_patients()
-            self._create_appointments()
-            self._create_opd_visits()
-            self._create_prescriptions()
-            self._create_lab_data()
-            self._create_radiology_data()
-            self._create_billing()
-            self._create_ipd()
-            self._create_nursing()
-            self._create_ambulance()
-            self._create_inventory()
-            self._create_hr()
-            self._create_notifications()
-            self._create_audit_logs()
+        self._create_roles()
+        self._create_admin()
+        self._create_branch()
+        self._create_departments()
+        self._create_specializations()
+        self._create_insurance()
+        self._create_doctors()
+        self._create_nurses()
+        self._create_pharmacists()
+        self._create_lab_techs()
+        self._create_accountants()
+        self._create_receptionists()
+        self._create_patients()
+        self._create_appointments()
+        self._create_opd_visits()
+        self._create_prescriptions()
+        self._create_lab_data()
+        self._create_radiology_data()
+        self._create_billing()
+        self._create_ipd()
+        self._create_nursing()
+        self._create_ambulance()
+        self._create_inventory()
+        self._create_hr()
+        self._create_notifications()
+        self._create_audit_logs()
 
         self._print_summary()
 
